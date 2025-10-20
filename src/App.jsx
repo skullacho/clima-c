@@ -18,13 +18,24 @@ function App() {
 
     setCarregando(true);
     setErro('');
-
+    //Try Executa os comandos
     try{
+      const API_KEY = "";
+      const url = "";
+      const resposta = await fetch(url);
+
+      if(!resposta.ok){
+        throw new Error('Cidade não encontrada');
+      }
+      const dados = await resposta.json();
+      setClima(dados);
 
     }catch (error){
+      setErro(error.message);
+      setClima(null);
 
     }finally{
-      
+      setCarregando(false);
     }
   }
   return (
