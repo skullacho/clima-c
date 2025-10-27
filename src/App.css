@@ -1,6 +1,6 @@
 .container{
   min-height: 100vh;
-  background: linear-gradient(135deg, #8d63ffcf 0%, #000000cf 100%);
+  background: linear-gradient(135deg, #a600ff 0%, #009dff 100%);
   padding: 32px;
 }
 .content{
@@ -23,19 +23,18 @@ header h1{
 }
 header p{
   font-size: 1.1em;
-  color: #00a2ff;
+  color: #bdeafe;
 }
 .busca-box{
   background: #fff;
   border-radius: 12px;
-  box-sizing: 0 10px 30px #00000098;
+  box-shadow: 0 10px 30px #00000098;
   padding: 24px;
   margin-bottom: 24px;
 }
 .busca-container{
   display: flex;
   gap: 8px;
-
 }
 .busca-container input{
   flex: 1;
@@ -47,13 +46,13 @@ header p{
 }
 .busca-container input:focus{
   border-color: #3b82f6;
-  box-shadow: 0 0 0 3px #3b83f652;
+  box-shadow: 0 0 0 3px #3b83f639;
 }
 .busca-container button{
   padding: 12px 24px;
-  background: #3b83f6b9;
+  background: #3b82f6;
   color: #fff;
-  border: nane;
+  border: none;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 500;
@@ -61,12 +60,13 @@ header p{
   transition: background 0.2s;
 }
 .busca-container button:hover{
-  background: #4c58ffc3;
+  background: #2563eb;
 }
 .busca-container button:disabled{
   cursor: not-allowed;
   background: #9ca3af;
 }
+
 #card-resultado{
   background: #fff;
   border-radius: 12px;
@@ -84,7 +84,7 @@ header p{
   gap: 8px;
   font-size: 1.5em;
   font-weight: bold;
-  color: #1f291f;
+  color: #1f2937;
   margin-bottom: 8px;
 }
 #cidade-desc{
@@ -104,4 +104,43 @@ header p{
 }
 #temp-sens{
   color: #4b5563;
+}
+#detalhe-box{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+.detal-item{
+  background: #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+.detal-icone{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.detal-texto{
+  font-size: 0.8em;
+  color: #444;
+  margin-bottom: 4px;
+}
+.detal-valor{
+  font-weight: bold;
+  color: #222;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px){
+  #detalhe-box{
+    grid-template-columns: 1fr;
+  }
+
+  #temp-valor{
+  font-size: 3em;
+  }
+  header h1{
+  font-size: 1.8em;
+  }
 }
